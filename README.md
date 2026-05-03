@@ -39,6 +39,8 @@ Penjelasan:
 ' OR '1'='1 selalu bernilai TRUE
 Query akan mengembalikan data meskipun tanpa password yang valid
 
-**## Hasil Eksperimen**
+
+📊 Hasil Eksperimen
+
 Setelah input dimasukkan, sistem berhasil login tanpa verifikasi password.
 Hal ini membuktikan bahwa sistem rentan terhadap SQL Injection.
