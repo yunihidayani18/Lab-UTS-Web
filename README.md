@@ -2,6 +2,12 @@ Nama  : YUNI HIDAYANI
 NIM   : 311910078
 Kelas : 1243B/B311FT-FH
 
+Berikut URL BUKTI CEK PLAGIASI yang sudah di download dalam bentuk pdf :
+https://drive.google.com/file/d/1dph8boUHiqOO82GVDbEGjKB0T3yJTtkE/view?usp=drivesdk
+
+URL WEBSITE BUKTI CEK PLAGIASI :
+https://share.google/cxpqiQ8afHNrjxsjF
+
 # UTS Pemrograman Web 2
 ## Eksperimen SQL Injection pada Aplikasi Web (CodeIgniter 4)
 
