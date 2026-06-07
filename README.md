@@ -1,51 +1,40 @@
-Nama  : YUNI HIDAYANI
-NIM   : 311910078
-Kelas : 1243B/B311FT-FH
+Nama : YUNI HIDAYANI
+NIM : 311910078
+Kelas : 1243B (B311 FT-FH)
+Mata Kuliah : Pemrograman Web 2
 
-Berikut URL BUKTI CEK PLAGIASI yang sudah di download dalam bentuk pdf :
-https://drive.google.com/file/d/1dph8boUHiqOO82GVDbEGjKB0T3yJTtkE/view?usp=drivesdk
+Praktikum 5 - Pagination dan Pencarian
 
-URL WEBSITE BUKTI CEK PLAGIASI :
-https://share.google/cxpqiQ8afHNrjxsjF
+Tujuan Praktikum
+1. Memahami konsep pagination pada CodeIgniter 4.
+2. Mengimplementasikan pencarian data artikel.
+3. Menggabungkan fitur pencarian dengan pagination.
+4. Menampilkan data secara lebih terstruktur dan efisien.
 
-# UTS Pemrograman Web 2
-## Eksperimen SQL Injection pada Aplikasi Web (CodeIgniter 4)
+Langkah-Langkah Praktikum
+1. Menambahkan Pagination
+Pagination digunakan untuk membatasi jumlah data yang ditampilkan dalam satu halaman sehingga proses pengelolaan data menjadi lebih mudah.
+Controller dimodifikasi dengan menggunakan method paginate() pada model artikel.
+<img src="screenshots/code1 praktikum 5.png" width="800">
 
-## Pendahuluan
-Keamanan aplikasi web merupakan aspek penting dalam pengembangan sistem. Salah satu celah keamanan yang sering terjadi adalah **SQL Injection**, yaitu teknik serangan dengan cara menyisipkan perintah SQL ke dalam input pengguna.
+2. Menambahkan Form Pencarian
 
-Eksperimen ini bertujuan untuk memahami bagaimana SQL Injection bekerja serta dampaknya terhadap sistem login yang tidak memiliki validasi input yang baik.
+Ditambahkan form pencarian pada halaman admin artikel.
+Pengguna dapat mencari artikel berdasarkan kata kunci yang dimasukkan pada form pencarian.
+<img src="screenshots/code2 praktikum 5.png" width="800">
 
-## Tujuan
-1. Memahami konsep SQL Injection  
-2. Menguji kerentanan sistem login  
-3. Mengetahui bagaimana query dapat dimanipulasi  
-4. Menjadi dasar untuk meningkatkan keamanan aplikasi  
+Hasil Pengujian
 
-##  Teknologi yang Digunakan
-- PHP (CodeIgniter 4)
-- MySQL / MariaDB
-- XAMPP
-- Visual Studio Code
-- Git & GitHub
+Menampilkan Pagination pada Data Artikel 
+Data artikel berhasil ditampilkan dengan sistem pagination.
+Screenshot:
+<img src="screenshots/praktikum5.png" width="800">
 
+Pencarian Data Artikel
+Pengguna dapat mencari artikel berdasarkan judul atau kata kunci tertentu.
+Screenshot:
+<img src="screenshots/Tambah pencarian praktikum 5.png" width="800">
 
-## Metode Eksperimen
-
-Eksperimen dilakukan dengan membuat sistem login sederhana tanpa validasi input yang aman.
-
-### Query yang digunakan:
-```sql
-SELECT * FROM user WHERE useremail='$email'
-
-Simulasi SQL Injection
-Input yang digunakan:
-' OR '1'='1
-Penjelasan:
-' OR '1'='1 selalu bernilai TRUE
-Query akan mengembalikan data meskipun tanpa password yang valid
-
-_## Hasil Eksperimen_
-Setelah input dimasukkan, sistem berhasil login tanpa verifikasi password.
-Hal ini membuktikan bahwa sistem rentan terhadap SQL Injection.
+Kesimpulan
+Pada praktikum ini berhasil diimplementasikan fitur pagination dan pencarian data menggunakan CodeIgniter 4. Fitur pagination membantu membatasi jumlah data yang ditampilkan pada setiap halaman, sedangkan fitur pencarian memudahkan pengguna menemukan data artikel secara cepat dan efisien.
 

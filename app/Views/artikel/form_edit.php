@@ -23,7 +23,25 @@
         <p>
             <textarea name="isi"><?= $artikel['isi']; ?></textarea>
         </p>
+<p>
+    <select name="id_kategori">
 
+        <?php foreach ($kategori as $k): ?>
+
+            <option value="<?= $k['id_kategori']; ?>"
+
+                <?= $k['id_kategori'] == $artikel['id_kategori']
+                    ? 'selected'
+                    : ''; ?>>
+
+                <?= $k['nama_kategori']; ?>
+
+            </option>
+
+        <?php endforeach; ?>
+
+    </select>
+</p>
         <p>
             <button type="submit">Update</button>
         </p>
