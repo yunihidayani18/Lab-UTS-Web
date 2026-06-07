@@ -1,30 +1,92 @@
-<?= $this->extend('layout/main') ?>
+<?= $this->include('template/header'); ?>
 
-<?= $this->section('content') ?>
+<div class="card">
 
-<h2><?= $title; ?></h2>
+    <div class="card-header bg-primary text-white">
+        <h4>Daftar Artikel</h4>
+    </div>
 
-<table border="1">
-<tr>
-    <th>ID</th>
-    <th>Judul</th>
-    <th>Status</th>
-    <th>Aksi</th>
-    </tr>
+    <div class="card-body">
+        <form method="get" class="mb-3">
 
-<?php foreach ($artikel as $row): ?>
-<tr>
-    <td><?= $row['id']; ?></td>
-    <td><?= $row['judul']; ?></td>
-    <td><?= $row['status']; ?></td>
-   <td>
-    <a class="btn btn-primary" href="<?= base_url('/admin/artikel/edit/'.$row['id']); ?>">Ubah</a>
-    <a class="btn btn-danger" onclick="return confirm('Yakin menghapus data?');"
-       href="<?= base_url('/admin/artikel/delete/'.$row['id']); ?>">Hapus</a>
-</td>
-</tr>
-<?php endforeach; ?>
+    <div class="input-group">
 
-</table>
-<?= $pager->links(); ?>
-<?= $this->endSection() ?>
+        <input type="text"
+               name="q"
+               value="<?= $q; ?>"
+               placeholder="Cari artikel..."
+               class="form-control">
+
+        <button class="btn btn-primary" type="submit">
+            Cari
+        </button>
+
+    </div>
+
+</form>
+
+        <table class="table table-bordered table-striped">
+
+            <thead class="table-primary">
+                <tr>
+                    <th>ID</th>
+                    <th>Judul</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            <?php foreach ($artikel as $row): ?>
+
+            <tr>
+                <td><?= $row['id']; ?></td>
+
+                <td>
+                    <strong><?= $row['judul']; ?></strong><br>
+                    <?= substr($row['isi'], 0, 50); ?>
+                </td>
+
+                <td><?= $row['status']; ?></td>
+
+                <td>
+
+                    <a class="btn btn-warning btn-sm"
+                       href="<?= base_url('/admin/artikel/edit/' . $row['id']); ?>">
+                       Ubah
+                    </a>
+
+                    <a class="btn btn-danger btn-sm"
+                       onclick="return confirm('Yakin hapus data?');"
+                       href="<?= base_url('/admin/artikel/delete/' . $row['id']); ?>">
+                       Hapus
+                    </a>
+
+                </td>
+            </tr>
+
+            <?php endforeach; ?>
+
+            </tbody>
+
+        </table>
+
+        <!-- Pagination -->
+        <nav>
+            <ul class="pagination">
+                <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+<?= $this->include('template/footer'); ?>
+

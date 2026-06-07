@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <title><?= $title; ?></title>
- <link rel="stylesheet" href="<?= base_url('/style.css');?>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><?= $title; ?></title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
- <div id="container">
- <header>
- <h1>Layout Sederhana</h1>
- </header>
- <nav>
- <a href="<?= base_url('/');?>" class="active">Home</a>
- <a href="<?= base_url('/artikel');?>">Artikel</a>
- <a href="<?= base_url('/about');?>">About</a>
- <a href="<?= base_url('/contact');?>">Kontak</a>
- </nav>
- <section id="wrapper">
- <section id="main">
-<a href="<?= base_url('/about');?>" class="active">About</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">Admin Portal Berita</a>
+
+        <div class="navbar-nav">
+              <a class="nav-link text-white"
+                 href="<?= base_url('/admin/artikel'); ?>">
+                  Dashboard
+              </a>
+            <a class="nav-link text-white"
+               href="<?= base_url('/admin/artikel'); ?>">
+               Artikel
+            </a>
+
+            <a class="nav-link text-white"
+               href="<?= base_url('/admin/artikel/add'); ?>">
+               Tambah Artikel
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container mt-4">
